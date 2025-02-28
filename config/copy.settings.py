@@ -17,8 +17,6 @@ RDS_PORT = "3306"
 # Kinesis Stream Details
 KINESIS_STREAM = ""
 
-AWS_ACCESS_KEY_ID = ""
-AWS_SECRET_KEY = ""
 AWS_REGION = ""
 
 # Other global settings

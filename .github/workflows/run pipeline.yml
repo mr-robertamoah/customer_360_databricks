@@ -1,15 +1,16 @@
 name: Trigger job on change of notebooks
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [closed]
+    branches: [main]
 
     paths:
       - "notebooks/*"
 
 jobs:
   run-databricks-job:
+    if: github.event.pull_request.merge == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
